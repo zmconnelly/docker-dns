@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build and publish image to ghcr.io
+    name: Build and push image
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +32,3 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}:${{ github.sha }}
             ghcr.io/${{ github.repository }}:latest
-
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
