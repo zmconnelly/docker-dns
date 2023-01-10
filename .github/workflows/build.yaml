@@ -29,7 +29,9 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ghcr.io/zmconnelly/docker-dns:latest
+          tags: |
+            ghcr.io/${{ github.repository }}:${GITHUB_SHA::7}
+            ghcr.io/${{ github.repository }}:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
