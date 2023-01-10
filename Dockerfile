@@ -6,4 +6,4 @@ RUN apk --no-cache add dnsmasq nano bash
 
 COPY dnsmasq.conf /etc/dnsmasq.d
 
-CMD ["dnsmasq"]
+CMD ["dnsmasq", "--no-daemon"]
