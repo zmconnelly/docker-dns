@@ -1,5 +1,5 @@
 # docker-dns
-A lightweight container-native DNS using dnsmasq 
+A lightweight container-native DNS using dnsmasq
 
 
 ## Usage
